@@ -11,7 +11,7 @@
 
 $buscarTicket = $entityManager->find('Tickets', $stdTicket['codigoTicket']);
 
-echo($buscarTicket);
+echo($buscarTicket->getEstado());
   
   $ticketUpdate = $entityManager->createQueryBuilder();
 $query = $ticketUpdate->update('Tickets', 't') 
