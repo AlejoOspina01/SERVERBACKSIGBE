@@ -22,5 +22,6 @@ if(empty($buscarTicket->getEstado())){
             ->getQuery();
             $execute = $query->execute();
   $respuesta = array("resultado" => "Actualizado con exito");
+  echo json_encode($respuesta);
 }
 
