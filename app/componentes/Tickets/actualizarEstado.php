@@ -17,3 +17,5 @@ $query = $ticketUpdate->update('Tickets', 't')
         ->setParameter(2,'Usado' )
         ->getQuery();
         $execute = $query->execute();
+
+echo json_encode("Actualizado exitosamente");
