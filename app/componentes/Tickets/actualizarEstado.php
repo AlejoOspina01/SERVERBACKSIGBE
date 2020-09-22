@@ -18,4 +18,8 @@ $query = $ticketUpdate->update('Tickets', 't')
         ->getQuery();
         $execute = $query->execute();
 
-echo json_encode("Actualizado exitosamente");
+$mensaje = array(
+  "resultado" => "Actualizado correctamente"
+);
+
+echo json_encode($mensaje);
