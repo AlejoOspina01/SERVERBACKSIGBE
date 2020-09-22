@@ -13,7 +13,7 @@
 $query = $ticketUpdate->update('Tickets', 't') 
         ->set('t.estadoticket', '?2')
         ->where('t.consecutivoticket = ?1')
-        ->setParameter(1,$params['codigoTicket'] )
+        ->setParameter(1,$stdTicket['codigoTicket'] )
         ->setParameter(2,'Usado' )
         ->getQuery();
         $execute = $query->execute();
