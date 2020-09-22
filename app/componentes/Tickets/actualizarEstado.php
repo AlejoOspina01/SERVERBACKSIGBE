@@ -11,6 +11,12 @@
 
 $buscarTicket = $entityManager->find('Tickets', $stdTicket['codigoTicket']);
 
+if(empty($buscarTicket->getEstado())){
+  echo "Vacio";
+}else{
+  echo "No esta vacio"; 
+}
+
 echo($buscarTicket->getEstado());
   
   $ticketUpdate = $entityManager->createQueryBuilder();
