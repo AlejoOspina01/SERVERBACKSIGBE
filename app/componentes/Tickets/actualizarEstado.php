@@ -18,4 +18,4 @@ $query = $ticketUpdate->update('Tickets', 't')
         ->getQuery();
         $execute = $query->execute();
 
-echo $query;
+var_dump($query);
