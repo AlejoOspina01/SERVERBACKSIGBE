@@ -8,6 +8,10 @@
   $params = json_decode($json);
   
   $stdTicket = get_object_vars($params);  
+
+$buscarTicket = $entityManager->find('Tickets', $stdTicket['codigoTicket']);
+
+var_dump($buscarTicket);
   
   $ticketUpdate = $entityManager->createQueryBuilder();
 $query = $ticketUpdate->update('Tickets', 't') 
@@ -18,4 +22,3 @@ $query = $ticketUpdate->update('Tickets', 't')
         ->getQuery();
         $execute = $query->execute();
 
-var_dump($query);
