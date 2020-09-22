@@ -17,4 +17,3 @@ $query = $ticketUpdate->update('Tickets', 't')
         ->setParameter(2,'Usado' )
         ->getQuery();
         $execute = $query->execute();
-header('Content-Type: application/json');
