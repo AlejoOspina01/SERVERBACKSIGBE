@@ -1,20 +1,16 @@
 <?php
  header('Access-Control-Allow-Origin: *'); 
  header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-
-
-
 require_once "../../../bootstrap.php";
-
-$periodo = $entityManager->createQueryBuilder()
-->select('pa.consecutivo_periodo, pa.descripcion')  
-->from('Periodosacademicos', 'pa') 
+$convocatorias = $entityManager->createQueryBuilder()
+->select('b.consecutivo_beca,b.descripcion')  
+->from('Becas', 'b') 
 ->getQuery()
 ->getArrayResult();
 
-if ($periodo === null) {
-    echo "No found.\n";
+if ($convocatorias === null) {
+    echo "No convomipana found.\n";
     exit(1);
 }
 
-echo json_encode($periodo);
+echo json_encode($convocatorias);

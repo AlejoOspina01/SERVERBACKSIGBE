@@ -28,14 +28,18 @@ class Convocatorias
      *@ORM\Column(type="string") 
      */
     protected $estado_convocatoria;
+     /** 
+     *@ORM\Column(type="integer") 
+     */
+    protected $cupo;
     /**
-     * @ORM\ManyToOne(targetEntity="Becas", inversedBy="becas", cascade={"persist", "remove" })
-     * @ORM\JoinColumn(name="becas", referencedColumnName="consecutivo_beca",nullable=true)
+     * @ORM\ManyToOne(targetEntity="Becas", inversedBy="Convocatorias", cascade={"persist", "remove" })
+     * @ORM\JoinColumn(name="becasid", referencedColumnName="consecutivo_beca",nullable=true)
      */
     protected $becas;
     /**
-     * @ORM\ManyToOne(targetEntity="Periodosacademicos", inversedBy="periodosacademicos", cascade={"persist", "remove" })
-     * @ORM\JoinColumn(name="periodosacademicos", referencedColumnName="consecutivo_periodo",nullable=true)
+     * @ORM\ManyToOne(targetEntity="Periodosacademicos", inversedBy="Convocatorias", cascade={"persist", "remove" })
+     * @ORM\JoinColumn(name="periodosacademicosid", referencedColumnName="consecutivo_periodo",nullable=true)
      */
     protected $periodosacademicos;
 
@@ -56,11 +60,14 @@ class Convocatorias
     {
         return $this->estado_convocatoria;
     }
+    public function getCupo(){
+      return $this->cupo;
+    }
     public function getConsecutivoBeca(){
-		return $this->consecutivo_beca;
+		return $this->becas;
     }
     public function getConsecutivoPeriodo(){
-		return $this->consecutivo_periodo;
+		return $this->periodosacademicos;
 	}
 
     //Establecer valores
@@ -72,6 +79,9 @@ class Convocatorias
     }
     public function setFechaFin($fechaFin){
         $this->fecha_fin = $fechaFin;
+    }
+    public function setCupo($cupo){
+      $this->cupo = $cupo;
     }
     public function setConsecutivoBeca($consecutivoBeca){
 		return $this->becas = $consecutivoBeca;
