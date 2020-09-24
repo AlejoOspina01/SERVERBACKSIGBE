@@ -11,12 +11,12 @@ $request = json_decode($postdata);
 $stdPropTickets = get_object_vars($request);
 $propiedadesTickets = get_object_vars($stdPropTickets['data']);
 
-$encontrarUsr = $entityManager->find('Usuarios',$propiedadesTickets['idUser']);
+$encontrarUsr = $entityManager->find('Usuarios',$stdPropTickets['idUser']);
 
 $tickets = new Tickets();
 $tickets->setFechaCompra(new \DateTime( 'now',  new DateTimeZone( 'America/Bogota' ) ));
-$tickets->setValor($propiedadesTickets['valorticket'] );
-$tickets->setTipoTicket($propiedadesTickets['tipoTicket']);
+$tickets->setValor($stdPropTickets['valorticket'] );
+$tickets->setTipoTicket($stdPropTickets['tipoTicket']);
 $tickets->setEstado('Sin usar');
 $tickets->setUsuario($encontrarUsr);
 
