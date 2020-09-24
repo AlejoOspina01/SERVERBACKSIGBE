@@ -9,18 +9,20 @@ $request = json_decode($postdata);
 
 
 $stdPropTickets = get_object_vars($request);
-var_dump($stdPropTickets);
 //$propiedadesTickets = get_object_vars($stdPropTickets['data']);
 
 $encontrarUsr = $entityManager->find('Usuarios',$stdPropTickets['idUser']);
 
-$tickets = new Tickets();
-$tickets->setFechaCompra(new \DateTime( 'now',  new DateTimeZone( 'America/Bogota' ) ));
-$tickets->setValor($stdPropTickets['valorticket'] );
-$tickets->setTipoTicket($stdPropTickets['tipoTicket']);
-$tickets->setEstado('Sin usar');
-$tickets->setUsuario($encontrarUsr);
+ $tickets = new Tickets();
+ $tickets->setFechaCompra(new \DateTime( 'now',  new DateTimeZone( 'America/Bogota' ) ));
+ $tickets->setValor($stdPropTickets['valorticket'] );
+ $tickets->setTipoTicket($stdPropTickets['tipoTicket']);
+ $tickets->setEstado('Sin usar');
+ $tickets->setUsuario($encontrarUsr);
 
 
-$entityManager->persist($tickets);
-$entityManager->flush();
+ $entityManager->persist($tickets);
+ $entityManager->flush();
+ 
+ $resultadosuccess = array( "resultado" => "Creado exitosamente" );
+ echo json_encode($resultadosuccess);
