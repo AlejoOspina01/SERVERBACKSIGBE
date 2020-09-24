@@ -9,7 +9,7 @@ $request = json_decode($postdata);
 
 
 $stdPropTickets = get_object_vars($request);
-$propiedadesTickets = get_object_vars($stdPropTickets['data']);
+//$propiedadesTickets = get_object_vars($stdPropTickets['data']);
 
 $encontrarUsr = $entityManager->find('Usuarios',$stdPropTickets['idUser']);
 
