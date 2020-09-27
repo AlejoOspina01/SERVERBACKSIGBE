@@ -23,7 +23,7 @@ $to = new SendGrid\Email(null, "alejandro.ospina@correounivalle.edu.co");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = getenv('SENDGRIND_API_KEY');
+$apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
