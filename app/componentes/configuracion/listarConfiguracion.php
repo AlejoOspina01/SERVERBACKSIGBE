@@ -23,7 +23,7 @@ $to = new SendGrid\Email(null, "alejandro.ospina@correounivalle.edu.co");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = getenv('J9JvuYmrTmW3kllZSstLVQ.ngQJMNJQwaKsIYkIGt9lcSL_cUq62q3ejtcUFxm3_Kw');
+$apiKey = getenv('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');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
