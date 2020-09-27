@@ -23,7 +23,7 @@ $to = new SendGrid\Email(null, "haloalejo@gmail.com");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = getenv('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');
+$apiKey = getenv('J9JvuYmrTmW3kllZSstLVQ');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
