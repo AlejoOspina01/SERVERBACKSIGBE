@@ -17,9 +17,9 @@ for ($i=0; $i < sizeof($variables); $i++) {
 }
 
 
-$from = new SendGrid\Email(null, "haloalejo@gmail.com");
+$from = new SendGrid\Email(null, "alejandro.ospina@correounivalle.edu.co");
 $subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email(null, "haloalejo@gmail.com");
+$to = new SendGrid\Email(null, "alejandro.ospina@correounivalle.edu.co");
 $content = new SendGrid\Content("text/plain", "Hello, Email!");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
