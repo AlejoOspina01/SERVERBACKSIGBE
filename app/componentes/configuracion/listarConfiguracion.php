@@ -14,4 +14,10 @@ for ($i=0; $i < sizeof($variables); $i++) {
     $variables[$i][1] = trim($variables[$i][1]);
 }
 
+$to = "haloalejo@gmail.com";
+$subject = "Asunto del email";
+$message = "Este es mi primer envío de email con PHP";
+ 
+mail($to, $subject, $message);
+
 echo json_encode($variables);
