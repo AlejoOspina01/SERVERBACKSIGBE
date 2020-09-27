@@ -14,6 +14,8 @@ class ComposerStaticInit89485991178f1b24f33bc45b326f29da
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '3f8bdd3b35094c73a26f0106e3c0f8b2' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
+        '9dda55337a76a24e949fbcc5d905a2c7' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/mail/Mail.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -149,6 +151,16 @@ class ComposerStaticInit89485991178f1b24f33bc45b326f29da
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'SendGrid' => 
+            array (
+                0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
+            ),
+        ),
+    );
+
     public static $fallbackDirsPsr0 = array (
         0 => __DIR__ . '/../..' . '/src',
     );
@@ -166,6 +178,7 @@ class ComposerStaticInit89485991178f1b24f33bc45b326f29da
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit89485991178f1b24f33bc45b326f29da::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit89485991178f1b24f33bc45b326f29da::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit89485991178f1b24f33bc45b326f29da::$prefixesPsr0;
             $loader->fallbackDirsPsr0 = ComposerStaticInit89485991178f1b24f33bc45b326f29da::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit89485991178f1b24f33bc45b326f29da::$classMap;
 

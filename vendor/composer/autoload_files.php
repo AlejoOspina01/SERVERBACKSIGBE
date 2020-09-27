@@ -13,4 +13,6 @@ return array(
     'e69f7f6ee287b969198c3c9d6777bd38' => $vendorDir . '/symfony/polyfill-intl-normalizer/bootstrap.php',
     '0d59ee240a4cd96ddbb4ff164fccea4d' => $vendorDir . '/symfony/polyfill-php73/bootstrap.php',
     'b6b991a57620e2fb6b2f66f03fe9ddc2' => $vendorDir . '/symfony/string/Resources/functions.php',
+    '3f8bdd3b35094c73a26f0106e3c0f8b2' => $vendorDir . '/sendgrid/sendgrid/lib/SendGrid.php',
+    '9dda55337a76a24e949fbcc5d905a2c7' => $vendorDir . '/sendgrid/sendgrid/lib/helpers/mail/Mail.php',
 );
