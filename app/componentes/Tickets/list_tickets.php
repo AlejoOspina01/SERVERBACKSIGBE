@@ -23,6 +23,7 @@ for($i=0; $i< sizeof($tickets); $i++){
       $arraytickets[] =  array(
       	              'consecutivoticket' =>  $tickets[$i]->getConsecutivoTicket(),
                       'fecha_compra' => $tickets[$i]-> getFechaCompra(), 
+	      	      'estado' => $tickets[$i]->getEstado(),
                       'identificacion_estudiante' => $tickets[$i]->getUsuario()->getIdentifacion(),
                       'codigo_estudiante' =>$tickets[$i]->getUsuario()->getCodigoEst(),
                       'nombre_estudiate' =>  $tickets[$i]->getUsuario()->getNombre(),
