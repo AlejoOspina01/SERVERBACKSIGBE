@@ -16,32 +16,4 @@ for ($i=0; $i < sizeof($variables); $i++) {
     $variables[$i][1] = trim($variables[$i][1]);
 }
 
-
-$request_body = json_decode('{
-  "personalizations": [
-    {
-      "to": [
-        {
-          "email": "alejandro@correounivalle.edu.co"
-        }
-      ],
-      "subject": "Hello, World!"
-    }
-  ],
-  "from": {
-    "email": "alejandro@correounivalle.edu.co"
-  },
-  "content": [
-    {
-      "type": "text/plain",
-      "value": "Hello, World!"
-    }
-  ]
-}');
-$response = $sg->client->mail()->send()->post($request_body);
-echo $response->statusCode();
-echo $response->body();
-echo $response->headers();
-
-
 echo json_encode($variables);
