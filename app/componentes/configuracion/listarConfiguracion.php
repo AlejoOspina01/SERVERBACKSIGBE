@@ -16,4 +16,13 @@ for ($i=0; $i < sizeof($variables); $i++) {
     $variables[$i][1] = trim($variables[$i][1]);
 }
 
-echo json_encode($variables);
+$arrayResultante= array(
+	"valorticketalmuerzo" => $variables[0][1],
+	"valorticketrefrigerio" => $variables[1][1],
+	"horainicioVentaAlmuerzo" => $variables[2][1],
+	"horaFinVentaAlmuerzo" => $variables[3][1],
+	"horainicioVentaRefrigerio" => $variables[4][1],
+	"horaFinVentaRefrigerio" => $variables[5][1]
+);
+
+echo json_encode($arrayResultante);
