@@ -20,7 +20,7 @@ for($i=0; $i< sizeof($tickets); $i++){
       
 
 	if($tickets[$i]->getUsuario()->getIdentifacion() == $identificacion){
-      $arraytickets[] =  array(
+      $arraytickets =  array(
       	              'consecutivoticket' =>  $tickets[$i]->getConsecutivoTicket(),
                       'fecha_compra' => $tickets[$i]-> getFechaCompra(), 
 	      	      'estado' => $tickets[$i]->getEstado(),
@@ -28,12 +28,7 @@ for($i=0; $i< sizeof($tickets); $i++){
                       'codigo_estudiante' =>$tickets[$i]->getUsuario()->getCodigoEst(),
                       'nombre_estudiate' =>  $tickets[$i]->getUsuario()->getNombre(),
                       'apellido_estudiate' =>  $tickets[$i]->getUsuario()->getApellido(),
-	              'tipoticket' =>  $tickets[$i]->getTipoTicket(),
-	      
-
-
-                      
-                        
+	              'tipoticket' =>  $tickets[$i]->getTipoTicket()
                     );
 }
 }
