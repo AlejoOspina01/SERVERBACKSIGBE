@@ -20,16 +20,16 @@ for($i=0; $i< sizeof($tickets); $i++){
       
 
 	if($tickets[$i]->getUsuario()->getIdentifacion() == $identificacion){
-      $arraytickets{} =  array(
-      	              'consecutivoticket' =>  $tickets[$i]->getConsecutivoTicket(),
-                      'fecha_compra' => $tickets[$i]-> getFechaCompra(), 
-	      	      'estado' => $tickets[$i]->getEstado(),
-                      'identificacion_estudiante' => $tickets[$i]->getUsuario()->getIdentifacion(),
-                      'codigo_estudiante' =>$tickets[$i]->getUsuario()->getCodigoEst(),
-                      'nombre_estudiate' =>  $tickets[$i]->getUsuario()->getNombre(),
-                      'apellido_estudiate' =>  $tickets[$i]->getUsuario()->getApellido(),
-	              'tipoticket' =>  $tickets[$i]->getTipoTicket()
-                    );
-}
+	      $arraytickets[] =  array(
+			      'consecutivoticket' =>  $tickets[$i]->getConsecutivoTicket(),
+			      'fecha_compra' => $tickets[$i]-> getFechaCompra(), 
+			      'estado' => $tickets[$i]->getEstado(),
+			      'identificacion_estudiante' => $tickets[$i]->getUsuario()->getIdentifacion(),
+			      'codigo_estudiante' =>$tickets[$i]->getUsuario()->getCodigoEst(),
+			      'nombre_estudiate' =>  $tickets[$i]->getUsuario()->getNombre(),
+			      'apellido_estudiate' =>  $tickets[$i]->getUsuario()->getApellido(),
+			      'tipoticket' =>  $tickets[$i]->getTipoTicket()
+			    		);
+	}
 }
 echo json_encode($arraytickets);
