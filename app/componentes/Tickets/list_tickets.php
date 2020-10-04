@@ -28,6 +28,8 @@ for($i=0; $i< sizeof($tickets); $i++){
                       'codigo_estudiante' =>$tickets[$i]->getUsuario()->getCodigoEst(),
                       'nombre_estudiate' =>  $tickets[$i]->getUsuario()->getNombre(),
                       'apellido_estudiate' =>  $tickets[$i]->getUsuario()->getApellido(),
+	              'tipoticket' =>  $tickets[$i]->getTipoTicket(),
+	      
 
 
                       
