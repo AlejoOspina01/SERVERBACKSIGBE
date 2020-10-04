@@ -34,6 +34,6 @@ for($i=0; $i< sizeof($tickets); $i++){
 }
 echo "{";
 for($i = 0;$i < sizeof($arraytickets);$i++){
-	echo $i . ":" json_encode($arraytickets[$i]);
+	echo($i . ":" json_encode($arraytickets[$i]));
 }
 echo "}";
