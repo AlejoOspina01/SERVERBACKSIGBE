@@ -1,9 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-
-
-require_once('../../../vendor/autoload.php');
+// rol.php <name>
 
 $textoArchivo = file("config.txt");
 $variables= array();
@@ -15,7 +13,6 @@ for ($i=0; $i < sizeof($textoArchivo); $i++) {
 for ($i=0; $i < sizeof($variables); $i++) { 
     $variables[$i][1] = trim($variables[$i][1]);
 }
-
 $arrayResultante= array(
 	"valorticketalmuerzo" => $variables[0][1],
 	"valorticketrefrigerio" => $variables[1][1],

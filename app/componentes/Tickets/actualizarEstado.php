@@ -24,4 +24,3 @@ if(empty($buscarTicket->getEstado())){
   $respuesta = array("resultado" => "Actualizado con exito");
   echo json_encode($respuesta);
 }
-
