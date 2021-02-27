@@ -37,4 +37,4 @@ $ticketencontrado = $entityManager->createQuery('SELECT tk FROM Tickets tk WHERE
 //	'fecha'         => $postulacionesEncontradas->getFechapostulacion(),
 //	'estrato'    => $postulacionesEncontradas->getEstrato(),
 //);
-echo json_encode($ticketencontrado);
+echo json_encode($ticketencontrado->getUsuario()->getIdentifacion());
