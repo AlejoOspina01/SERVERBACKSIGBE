@@ -43,7 +43,7 @@ try {
 		'tipoTicket'     => $ticketencontrado->getTipoTicket(),
 		'fechaticket'         => $ticketencontrado->getFechaCompra(),
 		'consecutivo_postulacion'     => $postulacionesEncontradas->getConsecutivo_postulacion(),
-		'fecha'         => $postulacionesEncontradas->getFechapostulacion(),
+		'fecha'         => $postulacionesEncontradas->getFechapostulacion()->format('Y-m-d'),
 		'estrato'    => $postulacionesEncontradas->getEstrato(),
 		'nombreest' =>  $ticketencontrado->getUsuario()->getNombre(),
 		'codigoest' => $ticketencontrado->getUsuario()->getCodigoEst(),
@@ -54,7 +54,7 @@ try {
 } catch (Exception $e) {
 	$postulacionfound =  array(
 		'tipoTicket'     => $ticketencontrado->getTipoTicket(),
-		'fechaticket'         => $ticketencontrado->getFechaCompra(),
+		'fechaticket'         => $ticketencontrado->getFechaCompra()->format('Y-m-d'),
 		'nombreest' =>  $ticketencontrado->getUsuario()->getNombre(),
 		'codigoest' => $ticketencontrado->getUsuario()->getCodigoEst(),
 		'beneficiario' => 0
