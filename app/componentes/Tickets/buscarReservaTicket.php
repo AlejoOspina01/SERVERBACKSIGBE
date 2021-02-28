@@ -41,7 +41,7 @@ try {
 	->getSingleResult();
 	$postulacionfound =  array(
 		'tipoTicket'     => $ticketencontrado->getTipoTicket(),
-		'fechaticket'         => $ticketencontrado->getFechaCompra(),
+		'fechaticket'         => $ticketencontrado->getFechaCompra()->format('Y-m-d'),
 		'consecutivo_postulacion'     => $postulacionesEncontradas->getConsecutivo_postulacion(),
 		'fecha'         => $postulacionesEncontradas->getFechapostulacion()->format('Y-m-d'),
 		'estrato'    => $postulacionesEncontradas->getEstrato(),
