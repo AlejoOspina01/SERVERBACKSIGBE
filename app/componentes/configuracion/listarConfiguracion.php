@@ -5,6 +5,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 $textoArchivo = file("config.txt");
 $variables= array();
+$horactual = date("H:i");     
 // Mostrar el contenido del archivo:
 for ($i=0; $i < sizeof($textoArchivo); $i++) { 
     array_push($variables, explode("|",$textoArchivo[$i]));
@@ -19,7 +20,8 @@ $arrayResultante= array(
 	"horainicioVentaAlmuerzo" => $variables[2][1],
 	"horaFinVentaAlmuerzo" => $variables[3][1],
 	"horainicioVentaRefrigerio" => $variables[4][1],
-	"horaFinVentaRefrigerio" => $variables[5][1]
+	"horaFinVentaRefrigerio" => $variables[5][1],
+	"horaactualserver" => $horactual
 );
 
 echo json_encode($arrayResultante);
