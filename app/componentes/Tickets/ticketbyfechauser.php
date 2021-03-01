@@ -26,7 +26,7 @@ if ($ticketencontrado === null) {
 	exit(1);
 }
 
- $arraytickets[] =  array(
+ $ticketfound[] =  array(
 	'concecutivo'     => $ticketencontrado->getConsecutivoTicket(),
 	'fecha'         => $ticketencontrado->getFechaCompra(),
 	'tipoTicket'    => $ticketencontrado->getTipoTicket()
