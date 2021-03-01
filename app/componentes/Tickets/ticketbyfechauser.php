@@ -22,7 +22,7 @@ $ticketencontrado = $entityManager->createQuery('SELECT u FROM Tickets u WHERE u
 ->getSingleResult();
 
 if ($ticketencontrado === null) {
-	echo "No asignacion found.\n";
+	echo "No asignacion founbbd.\n";
 	exit(1);
 }
 
