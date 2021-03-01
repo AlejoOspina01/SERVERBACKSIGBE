@@ -14,7 +14,7 @@ $fechahoy = new \DateTime('now');
 $fechafinal= $fechahoy->format('Y-m-d');
 $fechainicialhoy = $fechafinal . ' 00:00:00';
 $fechafinalhoy = $fechafinal . ' 23:59:59';
-echo $fechahoy;
+var_dump($fechahoy);
 
 // $ticketencontrado = $entityManager->createQuery('SELECT u FROM Tickets u WHERE u.fechacompra BETWEEN ?2 AND ?3 AND u.tipoTicket = ?4 AND u.usuario = ?1')
 $ticketencontrado = $entityManager->createQuery('SELECT u FROM Tickets u WHERE u.fechacompra BETWEEN ?2 AND ?3')
