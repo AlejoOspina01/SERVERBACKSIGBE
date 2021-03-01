@@ -12,8 +12,8 @@ $idUser = $_GET["idUser"];
 $tipoticketal = $_GET["tipoticket"];
 $fechahoy = new \DateTime('now');
 $fechafinal= $fechahoy->format('Y-m-d');
-$fechainicialhoy = $fechafinal . ' 00:00:00';
-$fechafinalhoy = $fechafinal . ' 23:59:59';
+$fechainicialhoy = '2021-02-28 00:00:00';
+$fechafinalhoy = '2021-02-28 23:59:59';
 var_dump($fechahoy);
 
 // $ticketencontrado = $entityManager->createQuery('SELECT u FROM Tickets u WHERE u.fechacompra BETWEEN ?2 AND ?3 AND u.tipoTicket = ?4 AND u.usuario = ?1')
