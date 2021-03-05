@@ -14,10 +14,7 @@ try {
 	->setParameter(1, $codigoticket)
 	->getSingleResult();
 	$valticket = true;
-} catch (Exception $e) {
-	throw new Exception('No tiene tickets');
-}
-if($valticket){
+	if($valticket){
 	$periodoencontrado = $entityManager->createQuery('SELECT pa FROM Periodosacademicos pa WHERE pa.fecha_fin = (SELECT MAX(p.fecha_fin) from Periodosacademicos p)')
 	->getSingleResult();
 
@@ -62,5 +59,9 @@ try {
 	);
 	echo json_encode($postulacionfound);
 }
+} catch (Exception $e) {
+	throw new Exception('No tiene tickets');
+}
+
 
 }
