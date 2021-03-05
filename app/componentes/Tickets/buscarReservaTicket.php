@@ -15,7 +15,7 @@ try {
 	->getSingleResult();
 	$valticket = true;
 } catch (Exception $e) {
-	throw new Exception('No tiene ticketss');
+	throw new Exception('No tiene tickets');
 }
 if($valticket){
 	$periodoencontrado = $entityManager->createQuery('SELECT pa FROM Periodosacademicos pa WHERE pa.fecha_fin = (SELECT MAX(p.fecha_fin) from Periodosacademicos p)')
